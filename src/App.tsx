@@ -5,7 +5,7 @@ import {products} from "./data/products"
 function App() {
   return (
     <div className="div">
-      <Product product={products[0]} />
+      <Product product={products[1]} age={2} />
     </div>
   );
 }
