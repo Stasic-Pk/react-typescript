@@ -6,7 +6,7 @@ export const products: IProduct[] = [
     title: 'test product',
     price: 13.536487,
     description: 'lorem ipsum set',
-    image: 'not found',
+    image: 'https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg',
     category: 'electronic',
     rating: {"rate": 3.1, "count": 35},
   },
@@ -17,5 +17,6 @@ export const products: IProduct[] = [
     description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    rating: {"rate": 3.9, "count": 120}}
+    rating: {"rate": 3.9, "count": 120}
+  }
 ]

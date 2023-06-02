@@ -1,37 +1,26 @@
 import React, { FC } from "react";
 import { useState } from "react";
 import { IProduct } from "../modules";
-import { title } from "process";
-import { count } from "console";
 
 interface productProps {
   product: IProduct
 }
 
-export const Product: FC<{product: IProduct, age: number}> = ({age, product}) => {
+export const Product: FC<{product: IProduct}> = ({product}) => {
   const[details, setDetails] = useState(false)
-  const[button, setButton] = useState("show")
-  
-  function buttonTitle() {
-    if (details == false) {
-      setButton("hide")
-      setDetails(true)
-    } else {
-      setButton("show")
-      setDetails(false)
-    }
-  }
 
   return (
-    <div>	
+    <div className="product">	
       {product.title} <br/>
+
       <img src={product.image} className="productImage"/> <br/>
+
       {product.price} <br/>
-      <button onClick={() => buttonTitle()}>
-        {button} description
+
+      <button className="button" onClick={() => setDetails(prev => !prev)}>
+        {details ? "hide details" : "show details"}
       </button>
-      {details && <div> {product.description} </div>}
-      {/* {product.description} */}
+      <div className="marginBottom"> { details && <div> {product.description} </div> } </div>
     </div>
   )
 }
