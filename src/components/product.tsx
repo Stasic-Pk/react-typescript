@@ -9,7 +9,7 @@ interface productProps {
 export const Product: FC<{product: IProduct}> = ({product}) => {
   const[details, setDetails] = useState(false)
   
-  const buttonClassName = details ? ' background-color: blue ' : ' background-color: green '
+  const buttonClassName = details ? " bgHide " : "bgShow"
   const buttonClasses = ["button", buttonClassName]
 
   return (

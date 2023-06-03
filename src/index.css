@@ -9,10 +9,18 @@
 }
 
 .button {
-  border-color: yellowgreen;
+  border-color: black;
   border-radius: 0.87pc;
   padding: 5px;
   width: 90px;
+}
+
+.bgHide {
+  background-color: rgb(46, 136, 46);
+}
+
+.bgShow {
+  background-color: rgb(167, 202, 83);
 }
 
 .div {
