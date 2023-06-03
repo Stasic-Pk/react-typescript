@@ -8,16 +8,18 @@ interface productProps {
 
 export const Product: FC<{product: IProduct}> = ({product}) => {
   const[details, setDetails] = useState(false)
+  
+  const buttonClassName = details ? ' background-color: blue ' : ' background-color: green '
+  const buttonClasses = ["button", buttonClassName]
 
   return (
     <div className="product">	
       {product.title} <br/>
 
       <img src={product.image} className="productImage"/> <br/>
-
       {product.price} <br/>
 
-      <button className="button" onClick={() => setDetails(prev => !prev)}>
+      <button className={buttonClasses.join(" ")} onClick={() => setDetails(prev => !prev)}>
         {details ? "hide details" : "show details"}
       </button>
       <div className="marginBottom"> { details && <div> {product.description} </div> } </div>
