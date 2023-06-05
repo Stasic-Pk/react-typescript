@@ -6,8 +6,10 @@ function App() {
   return (
     <div className='box'>
       <div className="div">
-        <Product product={products[0]} />
-        <Product product={products[1]} />
+        { products.map(product => <Product product = {product} key={product.id} />)}
+
+        {/* <Product product={products[0]} />
+        <Product product={products[1]} /> */}
       </div>
     </div>
   );
