@@ -40,3 +40,14 @@
 .marginBottom {
   height: 90px;
 }
+
+.load {
+  justify-content: center;
+  display: flex;
+}
+
+.error {
+  justify-content: center;
+  display: flex;
+  color: red;
+}
