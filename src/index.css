@@ -29,16 +29,13 @@
 
 .product {
   width: 300px;
+  padding-bottom: 35px;
 }
 
 .box {
   width: 100%;
   justify-content: center;
   display: flex;
-}
-
-.marginBottom {
-  height: 90px;
 }
 
 .load {

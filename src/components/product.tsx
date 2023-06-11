@@ -23,7 +23,7 @@ export const Product: FC<{product: IProduct}> = ({product}) => {
         {details ? "hide details" : "show details"}
       </button>
       <p>rate: <span style={{ fontWeight: "bold" }}> {product.rating.rate} </span></p>
-      <div className="marginBottom"> { details && <div> {product.description} </div> } </div>
+      { details && <div> {product.description} </div> }
     </div>
   )
 }
