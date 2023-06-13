@@ -1,10 +1,16 @@
 import React from "react";
 
-export function Modal() {
+interface ModalProps{
+  children: React.ReactNode
+}
+
+export function Modal({ children }: ModalProps) {
   return (
     <>
-      {/* <div className="backGround"/>
-      <div className="modal">Modal</div> */}
+      <div className="backGround"/>
+      <div className="modal"/>
+
+      {/* { children } */}
     </>
   )
 }

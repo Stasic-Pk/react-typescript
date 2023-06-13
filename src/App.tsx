@@ -5,6 +5,7 @@ import { useProducts } from './hooks/products';
 import { Loader } from './components/loader';
 import { ErrorMessage } from './components/errorMessage';
 import { Modal } from './components/modal';
+import { CreateProduct } from "./components/createProduct";
 
 function App() {
 
@@ -12,10 +13,12 @@ function App() {
 
   return (
     <div className='box'>
-      <Modal/>
+      <Modal>
+        <CreateProduct/>
+      </Modal>
       <div className="div">
         {loading && <Loader/>}
-        {error && <ErrorMessage error={error}/>}
+        {error && <ErrorMessage /*error={error}*//>}
         { products.map(product => <Product product = {product} key={product.id} />)}
 
       </div>
