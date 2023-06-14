@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className='box'>
-      <Modal>
+      <Modal title="Create new product">
         <CreateProduct/>
       </Modal>
       <div className="div">
