@@ -10,7 +10,7 @@ import { CreateProduct } from "./components/createProduct";
 function App() {
 
   const {products, loading, error} = useProducts()
-
+  
   return (
     <div className='box'>
       <Modal title="Create new product">
