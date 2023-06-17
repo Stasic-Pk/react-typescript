@@ -14,11 +14,11 @@ export function CreateProduct() {
   return (
     <form onSubmit={submitHandler}>
       <input 
-      type="text"
-      className="input"
-      placeholder="Enter product title"
-      value={value}
-      onChange={changeHandler}
+        type="text"
+        className="input"
+        placeholder="Enter product title"
+        value={value}
+        onChange={changeHandler}
       />
 
       <button type="submit" className="modalButton"> create </button>
