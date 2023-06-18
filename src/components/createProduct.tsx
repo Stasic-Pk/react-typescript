@@ -9,7 +9,7 @@ export function CreateProduct() {
 
   const changeHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
     setValue(event.target.value)
-  }
+  } 
 
   return (
     <form onSubmit={submitHandler}>
