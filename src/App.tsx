@@ -18,7 +18,7 @@ function App() {
       </Modal>
       <div className="div">
         {loading && <Loader/>}
-        {error && <ErrorMessage /*error={error}*//>}
+        {error && <ErrorMessage error={error}/>}
         { products.map(product => <Product product = {product} key={product.id} />)}
 
       </div>
