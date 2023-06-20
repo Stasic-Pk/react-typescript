@@ -8,19 +8,19 @@ import { Modal } from './components/modal';
 import { CreateProduct } from "./components/createProduct";
 
 function App() {
-
   const {products, loading, error} = useProducts()
+  const [modal, setModal] = useState(false)
   
   return (
     <div className='box'>
-      <Modal title="Create new product">
+      {modal && <Modal title="Create new product">
         <CreateProduct/>
-      </Modal>
+      </Modal>}
       <div className="div">
         {loading && <Loader/>}
         {error && <ErrorMessage error={error}/>}
+        {!loading && <button className='modalOn' onClick={() => setModal(!modal)}> create product </button>}
         { products.map(product => <Product product = {product} key={product.id} />)}
-
       </div>
     </div>
   );

@@ -81,3 +81,12 @@
   width: 120px;
   border-radius: 7px;
 }
+
+.modalOn {
+  position: fixed;
+  height: 26px;
+  width: 104px;
+  background-color: rgb(216, 216, 119);
+  border-radius: 7px;
+  left: 30vw;
+}
