@@ -12,15 +12,16 @@ function App() {
   const [modal, setModal] = useState(false)
   
   return (
+    
     <div className='box'>
+      { !loading && <button className='modalOn' onClick={() => setModal(!modal)}> create product </button> }
       {modal && <Modal title="Create new product">
-        <CreateProduct/>
+        <CreateProduct onCreate={() => setModal(false)} />
       </Modal>}
       <div className="div">
-        {loading && <Loader/>}
-        {error && <ErrorMessage error={error}/>}
-        {!loading && <button className='modalOn' onClick={() => setModal(!modal)}> create product </button>}
-        { products.map(product => <Product product = {product} key={product.id} />)}
+        { loading && <Loader/> }
+        { error && <ErrorMessage error={error}/> }
+        { products.map(product => <Product product = {product} key={product.id} />) }
       </div>
     </div>
   );
