@@ -22,7 +22,7 @@ export const Product: FC<{product: IProduct}> = ({product}) => {
       <button className={buttonClasses.join(" ")} onClick={() => setDetails(prev => !prev)}>
         {details ? "hide details" : "show details"}
       </button>
-      <p>rate: <span style={{ fontWeight: "bold" }}> {product.rating.rate} </span></p>
+      <p>rate: <span style={{ fontWeight: "bold" }}> {product?.rating?.rate} </span></p>
       { details && <div> {product.description} </div> }
     </div>
   )

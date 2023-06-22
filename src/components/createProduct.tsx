@@ -17,7 +17,7 @@ const productData: IProduct = {
 }
 
 interface createProductProps {
-  onCreate: () => void
+  onCreate: (product: IProduct) => void
 }
 
 export function CreateProduct({onCreate}: createProductProps) {
@@ -37,7 +37,7 @@ export function CreateProduct({onCreate}: createProductProps) {
 
     const response = await axios.post<IProduct>('https://fakestoreapi.com/products', productData)
 
-    onCreate()
+    onCreate(response.data)
   }
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,7 +54,7 @@ export function CreateProduct({onCreate}: createProductProps) {
         onChange={changeHandler}
       />
 
-      <button type="submit" className="modalButton"> create </button>
+      <button type="submit" className="modalButton" > create </button>
 
       { error && <ErrorMessage error={error} /> }
     </form>

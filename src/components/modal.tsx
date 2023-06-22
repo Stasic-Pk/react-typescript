@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 interface ModalProps{
   children: React.ReactNode
@@ -6,6 +6,7 @@ interface ModalProps{
 }
 
 export function Modal({ children, title }: ModalProps) {
+
   return (
     <>
       <div className="backGround"/>
