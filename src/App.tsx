@@ -19,7 +19,7 @@ function App() {
   return (
     <div className='box'>
       { !loading && <button className='modalOn' onClick={() => setModal(!modal)}> create product </button> }
-      {modal && <Modal title="Create new product">
+      {modal && <Modal title="Create new product" onClose = {() => setModal(!modal)}>
         <CreateProduct onCreate={createHandler} />
       </Modal>}
       <div className="div">
