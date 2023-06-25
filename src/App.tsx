@@ -10,10 +10,10 @@ import { ModalContext } from './context/modalContext';
 
 function App() {
   const {products, loading, error, addProduct} = useProducts()
-  const {modal, open, changeBool} = useContext(ModalContext)
+  const {modal, close, changeBool} = useContext(ModalContext)
 
   const createHandler = (product: IProduct) => {
-    open()
+    close()
     addProduct(product)
   }
   
