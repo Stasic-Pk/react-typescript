@@ -16,7 +16,7 @@ function App() {
     close()
     addProduct(product)
   }
-
+ 
   return (
     <div className='box'>
       { !loading && <button className='modalOn' onClick={changeBool}> create product </button> }
