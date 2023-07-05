@@ -90,3 +90,14 @@
   border-radius: 7px;
   left: 85vw;
 }
+
+.navigation {
+  background-color: rgb(44, 44, 44);
+  padding: 7.5px;
+  width: 100vw;
+  height: 60px;
+}
+
+.megaBigFontSize {
+  font: 25px sans-serif;
+}
