@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import {Product} from "../components/product"
+
+import { Product } from "../components/product"
 import { useProducts } from '../hooks/products';
 import { Loader } from '../components/loader';
 import { ErrorMessage } from '../components/errorMessage';
